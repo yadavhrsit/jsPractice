@@ -248,4 +248,90 @@
 // console.log(func(valu));
 
 
+            // Important Array Methods
+
+            // For Each
+// const numbers = [2,4,6,8];
+
+// const FunC = (number,index,arr) => {
+//     console.log(`Index is ${index} Number is ${number}`)
+//     console.log(arr); 
+//     }
+
+// numbers.forEach(FunC); //first value,its index,whole array
+// numbers.forEach(function(num,index){
+//     console.log(`Index is ${index} Number is ${num}`)
+
+// });
+
+// const users = [
+//     {firstName: "Harshit", age:22},
+//     {firstName: "Harsh", age:23},
+//     {firstName: "shit", age:24},
+// ]
+
+// users.forEach((user)=>{
+//     console.log(user.age);
+// })
+
+            // Map Method
+
+// array = [1,3,5,7,9];
+// const square = (num) => num*num;
+// function sum (num) {
+//     return num+num;
+// }
+// var newArr = array.map(sum);  //CREATES ARRAY OF RETURN
+// console.log(newArr);
+// var newArr2 = array.map(square)
+// console.log(array.map(square));
+
+// const userCredentials = [
+//     {userName:"Harshit",password:"abcd@1234"},
+//     {userName:"Abcd",password:"pqrst@8901"},
+//     {userName:"Xyz",password:"ijkl@4567"}
+// ]
+  
+// const output = userCredentials.map(function(user){
+//     console.log(user.userName,user.password);
+//     return user.userName;
+// })
+
+
+            // Filter Method
+
+// const randomNumbers=[1,2,3,4,5,6,7,8];
+// const checker = (randomNumber)=>randomNumber%2==0;
+// const evenNumbers = randomNumbers.filter(checker);
+// console.log(evenNumbers);
+
+            // Reduce Method
+
+// const someNumbers = [2,4,15,20,25];
+//     //  accumulator ,    currentValue ,    return
+//     //      2        +       4        =      6
+//     //      6        +       15       =      21
+//     //      21       +       20       =      41
+//     //      41       +       25       =      66
+// const sum = someNumbers.reduce((accumulator,currentValue)=>accumulator+currentValue);
+// console.log(sum);
+
+const userCart = [
+    {pId:11929,pName:"Phone",price:25000},
+    {pId:023423,pName:"Earphone",price:3000},
+    {pId:002344,pName:"Watch",price:12000},
+    {pId:502714,pName:"Charger",price:1000},
+    {pId:88106,pName:"Cover",price:1600}
+]
+// const totalAmount = userCart.reduce((totalPrice,currentProduct)=>{
+//     return currentProduct.price+totalPrice;
+//     },0
+// );
+const totalAmount2 = userCart.reduce((totalPrice,currentProduct)=>{
+    return totalPrice.price+currentProduct.price;
+    }
+);
+
+/* console.log(totalAmount); */
+console.log(totalAmount2);
 
