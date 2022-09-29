@@ -316,22 +316,16 @@
 // const sum = someNumbers.reduce((accumulator,currentValue)=>accumulator+currentValue);
 // console.log(sum);
 
-const userCart = [
-    {pId:11929,pName:"Phone",price:25000},
-    {pId:023423,pName:"Earphone",price:3000},
-    {pId:002344,pName:"Watch",price:12000},
-    {pId:502714,pName:"Charger",price:1000},
-    {pId:88106,pName:"Cover",price:1600}
-]
+// const userCart = [
+//     {pId:11929,pName:"Phone",price:25000},
+//     {pId:023423,pName:"Earphone",price:3000},
+//     {pId:002344,pName:"Watch",price:12000},
+//     {pId:502714,pName:"Charger",price:1000},
+//     {pId:88106,pName:"Cover",price:1600}
+// ]
 // const totalAmount = userCart.reduce((totalPrice,currentProduct)=>{
 //     return currentProduct.price+totalPrice;
 //     },0
 // );
-const totalAmount2 = userCart.reduce((totalPrice,currentProduct)=>{
-    return totalPrice.price+currentProduct.price;
-    }
-);
-
-/* console.log(totalAmount); */
-console.log(totalAmount2);
+// console.log(totalAmount);
 
