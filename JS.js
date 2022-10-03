@@ -329,3 +329,84 @@
 // );
 // console.log(totalAmount);
 
+            // Find
+
+// const myArray = ["hello","cat","dog","apple"];
+// function isLen3(string){
+//     return string.length === 3;
+// }
+// console.log(myArray.find(isLen3));
+
+            // Every
+// const numbers = [1,3,4,5,7,8,9];
+
+// let output = numbers.every((number)=>number%2===0);
+// console.log(output);
+
+             // Some
+
+// const userCart = [
+//     {pId:1,pName:"Laptop",price:48000},
+//     {pId:2,pName:"Smartphone",price:18000},
+//     {pId:3,pName:"TV",price:88000},
+//     {pId:4,pName:"Headphone",price:6000}
+// ];
+
+// let ans = userCart.some((cartItem)=>cartItem.price<50000)
+// console.log(ans);
+
+            // Fill
+// const myArray = new Array(10).fill(-1);
+// console.log(myArray);
+// const myArray = [1,2,3,4,5,6,7,8];
+// myArray.fill(0,3,6);
+// console.log(myArray);
+
+            // Splice
+// const myArray = ['item1','item2','item3'];
+//  myArray.splice(0,2);
+//  console.log(myArray);
+// myArray.splice(3,0,'item4');
+//  console.log(myArray);
+// let delItem = myArray.splice(1,2,'replaced');
+// console.log(myArray);
+// console.log(delItem);
+
+            // Iterables (array like Objects)
+            // Sets
+// const numbers =  new Set([1,2,3,"abcd",[4,5,6]]);
+// const newNumbers  = new Set([1,2,3,3]);
+// console.log(numbers.has(2));
+// console.log(newNumbers);
+// var arr = [1,2,3,4,1,2,8];
+// arr=new Set(arr);
+// console.log(arr);
+
+            // Map
+// const person =  new Map();
+// person.set('firstname','Harshit');
+// person.set(1,'One');
+// person.set('lastname','Yadav');
+// console.log(person.get(1));
+// console.log(person.keys());
+// for (let key of person.keys()){
+//     console.log(key);
+// }
+
+// for (let key of person){
+//     console.log(key);
+// }
+
+// for (let [key,value] of person){
+//     console.log(key,value);
+// }
+
+const person1 = {
+    id:1,
+    firstName: "Harshit"
+}
+
+const userInfo = new Map();
+userInfo.set(person1,{age:8,gender:"male"});
+console.log(userInfo) ;
+console.log(userInfo.get(person1).gender) ;
