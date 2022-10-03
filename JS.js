@@ -401,12 +401,38 @@
 //     console.log(key,value);
 // }
 
-const person1 = {
-    id:1,
-    firstName: "Harshit"
-}
+// const person1 = {
+//     id:1,
+//     firstName: "Harshit"
+// }
 
-const userInfo = new Map();
-userInfo.set(person1,{age:8,gender:"male"});
-console.log(userInfo) ;
-console.log(userInfo.get(person1).gender) ;
+// const userInfo = new Map();
+// userInfo.set(person1,{age:8,gender:"male"});
+// console.log(userInfo) ;
+// console.log(userInfo.get(person1).gender) ;
+
+            // Functions inside Objects
+
+// const person = {
+//     fName: "Harshit",
+//     lName: "Yadav",
+//     about: function(){
+//         console.log(`person name is ${this.fName}`);
+//     }
+// }
+
+// person.about();
+
+            //call,apply,bind methods
+
+const user1 = {
+    Name:"Harshit",
+    id:01,
+    about:function(){console.log(this.Name)}
+};
+const user2 = {
+    Name:"Mohit",
+    id:02
+};
+user1.about();
+user1.about.call(user2);
