@@ -425,14 +425,62 @@
 
             //call,apply,bind methods
 
-const user1 = {
-    Name:"Harshit",
-    id:01,
-    about:function(){console.log(this.Name)}
-};
-const user2 = {
-    Name:"Mohit",
-    id:02
-};
-user1.about();
-user1.about.call(user2);
+// const user1 = {
+//     Name:"Harshit",
+//     id:01,
+//     about:function(age,hobby){console.log(this.Name,age,this.id,hobby)}
+// };
+// const user2 = {
+//     Name:"Mohit",
+//     id:02
+// };
+// user1.about(22,"coding");
+// user1.about.call(user2,22,"coding");
+// user1.about.apply(user2,[22,'programming']);
+// const func = user1.about.bind(user1,22,"coding");
+// func();
+
+
+            //this doesnt works with Arrow Function 
+// const user1 = {
+//         Name:"Harshit",
+//         id:01,
+//         about:()=>{console.log(this.Name)}
+//      };
+
+//      user1.about();
+
+
+
+
+
+/////////////////////////////////////
+
+
+// const userMethods = {
+//     userData:function(){
+//         return `${this.Name}'s contact number is ${this.Phone}`
+//     },
+//     is18:function(){
+//         return this.Age>=18;
+//     }
+// }
+
+// function createUser(name,email,age,phone){
+//     const user=Object.create(userMethods);
+//     const tempUser=userMethods;
+//     user.Name=name;
+//     user.Email=email;
+//     user.Age=age;
+//     user.Phone=phone;
+//     return user;
+// }
+
+// function userRegistration(){
+//     const newUser=createUser("Harshit","me@abc.com",20,9695123138);
+//     users.push(newUser);
+// }
+
+// const users=[];
+// userRegistration();
+// console.log(users);
