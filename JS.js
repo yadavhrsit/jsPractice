@@ -466,21 +466,29 @@
 //     }
 // }
 
-// function createUser(name,email,age,phone){
-//     const user=Object.create(userMethods);
-//     const tempUser=userMethods;
-//     user.Name=name;
-//     user.Email=email;
-//     user.Age=age;
-//     user.Phone=phone;
-//     return user;
-// }
+function createUser(name,email,age,phone){
+    const user=Object.create(createUser.prototype);
+    /* const tempUser=userMethods; */
+    user.Name=name;
+    user.Email=email;
+    user.Age=age;
+    user.Phone=phone;
+    return user;
+}
 
-// function userRegistration(){
-//     const newUser=createUser("Harshit","me@abc.com",20,9695123138);
-//     users.push(newUser);
-// }
+createUser.prototype.userData = function(){
+    return `${this.Name}'s contact number is ${this.Phone}`
+};
+createUser.prototype.is18 = function(){
+    return this.Age>=18;
+}
 
-// const users=[];
-// userRegistration();
-// console.log(users);
+function userRegistration(){
+    const newUser=createUser("Harshit","me@abc.com",20,9695123138);
+    users.push(newUser);
+}
+
+const users=[];
+userRegistration();
+console.log(users[0].userData());
+
