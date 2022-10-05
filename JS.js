@@ -466,32 +466,32 @@
 //     }
 // }
 
-function createUser(name,email,age,phone){
-    /* const user=Object.create(createUser.prototype); */
-    this.Name=name;
-    this.Email=email;
-    this.Age=age;
-    this.Phone=phone;
-}
+// function CreateUser(name,email,age,phone){
+//     /* const user=Object.create(createUser.prototype); */
+//     this.Name=name;
+//     this.Email=email;
+//     this.Age=age;
+//     this.Phone=phone;
+// }
 
-createUser.prototype.userData = function(){
-    return `${this.Name}'s contact number is ${this.Phone}`
-};
-createUser.prototype.is18 = function(){
-    return this.Age>=18;
-}
+// CreateUser.prototype.userData = function(){
+//     return `${this.Name}'s contact number is ${this.Phone}`
+// };
+// CreateUser.prototype.is18 = function(){
+//     return this.Age>=18;
+// }
 
-function userRegistration(username,email,age,contact){
-    users.push(new createUser(username,email,age,contact));
-}
+// function userRegistration(username,email,age,contact){
+//     users.push(new CreateUser(username,email,age,contact));
+// }
 
-let users=[];
-userRegistration("h8ydv","h8ydv@me.com",22,9695123138);
-userRegistration("h9ydv","h8ydv@me.com",22,9695123138);
-userRegistration("h10ydv","h8ydv@me.com",22,9695123138);
-userRegistration("h11ydv","h8ydv@me.com",22,9695123138);
-userRegistration("h12ydv","h8ydv@me.com",22,9695123138);
-console.log(users[0]);
+// let users=[];
+// userRegistration("h8ydv","h8ydv@me.com",22,9695123138);
+// userRegistration("h9ydv","h8ydv@me.com",22,9695123138);
+// userRegistration("h10ydv","h8ydv@me.com",22,9695123138);
+// userRegistration("h11ydv","h8ydv@me.com",22,9695123138);
+// userRegistration("h12ydv","h8ydv@me.com",22,9695123138);
+// console.log(users[0]);
 
             //New
 // function createUser(firstName,age){
@@ -501,3 +501,30 @@ console.log(users[0]);
 // var users=[];
 // users.push(new createUser("Harshit",22));
 // console.log(users[0].age);
+
+            //classes
+// class CreateUser{
+//     constructor(firstName, lastName, email, age, address){
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.email = email;
+//         this.age = age;
+//         this.address = address;
+//     }
+
+//     about(){
+//         return `${this.firstName} is ${this.age} years old.`;
+//     }
+//     is18(){
+//         return this.age >= 18;
+//     }
+//     sing(){
+//         return "la la la la ";
+//     }
+
+// }
+
+
+// const user1 = new CreateUser('shgdvr', 'asdsd', 'zxc@me.com', 18, "my address");
+// const user2 = new CreateUser('asd', 'dsdd', 'zxccxx@me.com', 19, "my address");
+// const user3 = new CreateUser('aasdsx', 'zxczxca', 'qwet@me.com', 17, "my address");
