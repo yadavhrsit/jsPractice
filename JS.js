@@ -467,13 +467,11 @@
 // }
 
 function createUser(name,email,age,phone){
-    const user=Object.create(createUser.prototype);
-    /* const tempUser=userMethods; */
-    user.Name=name;
-    user.Email=email;
-    user.Age=age;
-    user.Phone=phone;
-    return user;
+    /* const user=Object.create(createUser.prototype); */
+    this.Name=name;
+    this.Email=email;
+    this.Age=age;
+    this.Phone=phone;
 }
 
 createUser.prototype.userData = function(){
@@ -483,12 +481,23 @@ createUser.prototype.is18 = function(){
     return this.Age>=18;
 }
 
-function userRegistration(){
-    const newUser=createUser("Harshit","me@abc.com",20,9695123138);
-    users.push(newUser);
+function userRegistration(username,email,age,contact){
+    users.push(new createUser(username,email,age,contact));
 }
 
-const users=[];
-userRegistration();
-console.log(users[0].userData());
+let users=[];
+userRegistration("h8ydv","h8ydv@me.com",22,9695123138);
+userRegistration("h9ydv","h8ydv@me.com",22,9695123138);
+userRegistration("h10ydv","h8ydv@me.com",22,9695123138);
+userRegistration("h11ydv","h8ydv@me.com",22,9695123138);
+userRegistration("h12ydv","h8ydv@me.com",22,9695123138);
+console.log(users[0]);
 
+            //New
+// function createUser(firstName,age){
+//     this.firstName=firstName;
+//     this.age=age;
+// }
+// var users=[];
+// users.push(new createUser("Harshit",22));
+// console.log(users[0].age);
