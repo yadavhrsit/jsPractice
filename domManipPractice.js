@@ -64,5 +64,30 @@
 // console.log(sectionTodo.classList.contains("container"));
 // sectionTodo.classList.toggle("bg-dark");
 
-const header = document.querySelector(".header");
-header.classList.add("bg-dark");
+// const header = document.querySelector(".header");
+// header.classList.add("bg-dark");
+
+
+            // add HTML element using Javascript   
+// const todoList = document.querySelector(".todo-list");
+// todoList.innerHTML += "<li>New Todo</li>";
+
+// const newTodoItem = document.createElement("li");
+// const newTodoItemText = document.createTextNode("Teach Students");
+// const todoList = document.querySelector(".todo-list");
+// newTodoItem.append(newTodoItemText);
+// todoList.append(newTodoItem);
+
+// const newTodoItem = document.createElement("li");
+// newTodoItem.textContent = "Teach People";
+// todoList.prepend(newTodoItem);
+
+            // before & after
+// const newTodoItem = document.createElement("li");
+// newTodoItem.textContent = "Teach People";
+// const todoList = document.querySelector(".todo-list");
+// todoList.before(newTodoItem);
+
+            // insert Adjascent HTML
+// const todoList = document.querySelector(".todo-list");
+// todoList.insertAdjacentHTML("beforeend","<li>Teach everyone</li>");
