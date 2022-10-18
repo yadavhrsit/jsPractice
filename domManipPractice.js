@@ -91,3 +91,28 @@
             // insert Adjascent HTML
 // const todoList = document.querySelector(".todo-list");
 // todoList.insertAdjacentHTML("beforeend","<li>Teach everyone</li>");
+
+            // Clone Nodes
+// const ul = document.querySelector(".todo-list");
+// const li = document.createElement("li");
+// li.textContent = "new todo";
+// ul.append(li);
+// ul.prepend(li);     // This wont work ,we can either prepend or append
+
+// const ul = document.querySelector(".todo-list");
+// const li = document.createElement("li");
+// li.textContent = "new todo";
+// const li2 = li.cloneNode(true);      // true argument for deep cloning
+// ul.append(li);                       // or li will be created without text
+// ul.prepend(li2);     
+
+
+            // static list vs Live list
+const listItems = document.querySelectorAll(".todo-list li");
+const sixthli = document.createElement("li");
+sixthli.textContent = "item6";
+const ul = document.querySelector(".todo-list");
+ul.append(sixthli);
+// console.log(listItems);
+const listItems2 = ul.getElementsByTagName("li");
+console.log(listItems2);
