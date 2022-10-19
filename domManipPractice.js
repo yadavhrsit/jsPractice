@@ -108,11 +108,13 @@
 
 
             // static list vs Live list
-const listItems = document.querySelectorAll(".todo-list li");
-const sixthli = document.createElement("li");
-sixthli.textContent = "item6";
-const ul = document.querySelector(".todo-list");
-ul.append(sixthli);
+// const listItems = document.querySelectorAll(".todo-list li");
+// const sixthli = document.createElement("li");
+// sixthli.textContent = "item6";
+// const ul = document.querySelector(".todo-list");
+// ul.append(sixthli);
 // console.log(listItems);
-const listItems2 = ul.getElementsByTagName("li");
-console.log(listItems2);
+// const listItems2 = ul.getElementsByTagName("li");
+// console.log(listItems2);
+
+            // how to get dimensions of an element
