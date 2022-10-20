@@ -117,4 +117,93 @@
 // const listItems2 = ul.getElementsByTagName("li");
 // console.log(listItems2);
 
-            
+
+                // Practice with Click events
+// const allButtons = document.querySelectorAll(".todo-btn");
+// allButtons.forEach((button)=>{
+//     button.addEventListener("click",(e)=>{
+//         console.log(e.currentTarget.textContent);
+//         e.target.style.backgroundColor = "grey";
+//         e.target.style.color = "white";
+//      })
+// })      
+                // keypress & mouseover
+// const body = document.body;
+// body.addEventListener("keypress",(e)=>{
+//     console.log(e);
+//     console.log(e.currentTarget,e.target);
+// })
+// const learMoreBtn=document.querySelector(".btn-headline");
+// learMoreBtn.addEventListener("mouseover",()=>{
+//     console.log("mouseover event occured");
+// })
+// learMoreBtn.addEventListener("mouseleave",()=>{
+//     console.log("mouseleave event occured");
+// })
+
+
+                // Event Bubbling 
+// const grandparent = document.querySelector(".grandparent");
+// const parent = document.querySelector(".parent");
+// const child = document.querySelector(".child");
+
+// capturing events
+// child.addEventListener("click",()=>{
+//     console.log("Captured child");
+// },true);
+// parent.addEventListener("click",()=>{
+//     console.log("Captured Parent");
+// },true);
+// grandparent.addEventListener("click",()=>{
+//     console.log("Captured grandParent");
+// },true);
+
+// Capturing (first)===>(then) Bubbling ( Left to Right )
+
+// Not capturing
+// child.addEventListener("click",()=>{
+//     console.log("Bubbled child");
+// });
+// parent.addEventListener("click",()=>{
+//     console.log("Bubbled Parent");
+// });
+// grandparent.addEventListener("click",()=>{
+//     console.log("Bubbled grandParent");
+// });
+
+
+            // Event Delegation
+// grandparent.addEventListener("click",(e)=>{
+//     console.log(e.target.textContent,"you clicked");
+// })
+
+const todoForm = document.querySelector(".form-todo");
+const todoInput = document.querySelector(".form-todo input[type='text']");
+const todoList = document.querySelector(".todo-btn");
+todoForm.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    const newTodoText = todoInput.value;
+    const newLi = document.createElement("li");
+    const newLiInnerHtml = `
+        <span class="text">${newTodoText}</span>
+        <div class="todo-buttons">
+        <button class="todo-btn done">Done</button>
+        <button class="todo-btn remove">Remove</button>
+        </div>
+        `;
+    newLi.innerHTML = newLiInnerHtml;
+    /* todoList.append(newLi); */
+    todoInput.value="";
+});
+todoList.addEventListener("click",function(){
+    if(e.target.classList.contains("remove")){
+        /* const removeLi = e.target.parentNode.parentNode;
+        removeLi.remove(); */
+        console.log(this);
+    }
+    if(e.target.classList.contains("done")){
+        const liSpan = e.target.parentNode.previousElementSibling;
+        liSpan.style.textDecoration = "line-through";
+    }
+});
+
