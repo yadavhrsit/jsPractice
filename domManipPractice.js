@@ -117,4 +117,4 @@
 // const listItems2 = ul.getElementsByTagName("li");
 // console.log(listItems2);
 
-            // how to get dimensions of an element
+            
