@@ -1,0 +1,100 @@
+
+<!-- code for the first Part of this code -->
+
+
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en"> -->
+<!-- <head> -->
+    <!-- <meta charset="UTF-8"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <title>Document</title> -->
+<!-- </head> -->
+<!-- <body> -->
+    <!-- <script> -->
+        <!-- class User { -->
+            <!-- constructor(name,userName,pwd){ -->
+                <!-- this.name =  name; -->
+                <!-- this.userName = userName; -->
+                <!-- this.pwd = pwd; -->
+            <!-- } -->
+            <!-- login(userName,pwd){ -->
+                <!-- if(userName===this.userName && pwd === this.pwd) -->
+                    <!-- console.log("Login Successful"); -->
+                <!-- else -->
+                    <!-- console.log("Failed Login"); -->
+            <!-- } -->
+            <!-- newPassword(password){ -->
+                <!-- this.pwd = password; -->
+                <!-- console.log("Password Changed"); -->
+            <!-- } -->
+        <!-- } -->
+        <!-- var obj = new User ("Harshit","h8ydv","abcdef"); -->
+        <!-- obj.login("h8ydv","abcdef"); -->
+        <!-- obj.newPassword("zxcvbnm"); -->
+    <!-- </script> -->
+<!-- </body> -->
+<!-- </html> -->
+
+
+<!-- code for the second Part of this code when we used #pwd to declare it private  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User {
+            name;
+            userName;
+            #pwd
+            constructor(){
+                
+            }
+
+            login(userName,pwd){
+                if(userName===this.userName && pwd === this.#pwd)
+                    console.log("Login Successful");
+                else
+                    console.log("Failed Login");
+            }
+            newPassword(password){
+                this.#pwd = password;
+                console.log("Password Changed");
+            }
+            #validateUsername(userName){
+                return true;
+            }
+            #validatePassword(pwd){
+                return true;
+            }
+            signUp(name,userName,pwd){
+                let valid = false;
+                valid = this.#validateUsername;
+                valid = valid && this.#validatePassword;
+                if(valid){
+                    this.name =  name;
+                    this.userName = userName;
+                    this.#pwd = pwd;
+                    console.log("Validated");
+                }
+                else
+                console.log("Not validated");
+            }
+        }
+        
+       // var obj = new User ("Harshit","h8ydv","abcdef");
+        //obj.login("h8ydv","abcdef");
+        //obj.newPassword("zxcvbnm");
+
+        var obj2 =  new User ();
+        obj2.signUp("Harshit","H8ydv","123456");
+        obj2.login("H8ydv","123456");
+    </script>
+</body>
+</html>
